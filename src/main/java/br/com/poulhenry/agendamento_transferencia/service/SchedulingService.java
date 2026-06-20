@@ -23,10 +23,6 @@ public class SchedulingService {
     public SchedulingResponse schedule(CreateScheduleRequest request) {
         var differentDays = ChronoUnit.DAYS.between(LocalDate.now(), request.getSchedulingDate());
 
-        if (differentDays < 0) {
-            // deu ruim aqui.
-        }
-
         var tier = factory.getTierTransferStrategy(differentDays);
         var tax = tier.calculate(request.getValue());
 

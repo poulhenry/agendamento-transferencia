@@ -6,12 +6,12 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class SchedulingResponse {
-    private Long id;
-    private String originAccount;
-    private String destinationAccount;
-    private BigDecimal value;
-    private BigDecimal tax;
-    private LocalDate schedulingDate;
+    private final Long id;
+    private final String originAccount;
+    private final String destinationAccount;
+    private final BigDecimal value;
+    private final BigDecimal tax;
+    private final LocalDate schedulingDate;
 
     public SchedulingResponse(Long id, String originAccount, String destinationAccount, BigDecimal value, BigDecimal tax, LocalDate schedulingDate) {
         this.id = id;
@@ -33,5 +33,27 @@ public class SchedulingResponse {
         );
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getOriginAccount() {
+        return originAccount;
+    }
+
+    public String getDestinationAccount() {
+        return destinationAccount;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public BigDecimal getTax() {
+        return tax;
+    }
+
+    public LocalDate getSchedulingDate() {
+        return schedulingDate;
+    }
 }
