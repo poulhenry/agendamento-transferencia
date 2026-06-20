@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SchedulingService {
@@ -18,6 +20,14 @@ public class SchedulingService {
     public SchedulingService(TransferFeeFactory factory, SchedulingRepository repository) {
         this.factory = factory;
         this.repository = repository;
+    }
+
+    public List<SchedulingResponse> listAll() {
+        return this.repository
+                .findAll()
+                .stream()
+                .map(SchedulingResponse::from)
+                .collect(Collectors.toList());
     }
 
     public SchedulingResponse schedule(CreateScheduleRequest request) {
