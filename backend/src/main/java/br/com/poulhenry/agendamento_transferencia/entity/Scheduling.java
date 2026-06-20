@@ -18,7 +18,7 @@ public class Scheduling {
     private String destinationAccount;
 
     @Column(nullable = false)
-    private BigDecimal value;
+    private BigDecimal originValue;
 
     @Column(nullable = false)
     private BigDecimal tax;
@@ -32,7 +32,7 @@ public class Scheduling {
     public Scheduling(String originAccount, String destinationAccount, BigDecimal value, BigDecimal tax, LocalDate transferDate, LocalDate schedulingDate) {
         this.originAccount = originAccount;
         this.destinationAccount = destinationAccount;
-        this.value = value;
+        this.originValue = value;
         this.tax = tax;
         this.transferDate = transferDate;
         this.schedulingDate = schedulingDate;
@@ -54,7 +54,7 @@ public class Scheduling {
     }
 
     public BigDecimal getValue() {
-        return value;
+        return originValue;
     }
 
     public BigDecimal getTax() {
