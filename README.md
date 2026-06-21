@@ -2,7 +2,7 @@
 
 Aplicação desenvolvida como teste técnico para gerenciamento de agendamentos de transferências financeiras.
 
-<video src="./docs/Screencast From 2026-06-21 19-23-26.mp4" controls></video
+https://github.com/user-attachments/assets/d278352c-bf9b-4318-aa99-56d31eb64f38
 
 ## Tecnologias Utilizadas
 
