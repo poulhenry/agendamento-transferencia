@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/agendamento")
+@CrossOrigin(origins = "http://localhost:5173", maxAge = 3600)
 public class SchedulingController {
 
     private final SchedulingService service;
