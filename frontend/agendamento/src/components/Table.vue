@@ -74,7 +74,7 @@ defineExpose({
                 <tr v-else-if="error">
                     <th colspan="6" class="text-center text-red-300">{{ error }}</th>
                 </tr>
-                <tr v-else-if="!appointments">
+                <tr v-else-if="!appointments || appointments?.length == 0">
                     <th colspan="6" class="text-center">Sem informações</th>
                 </tr>
                 <tr v-else v-for="appointment in appointments" :key="appointment.id">
