@@ -15,6 +15,6 @@ public class TierTwoTransferFee implements TransferFeeStrategy{
     @Override
     public BigDecimal calculate(BigDecimal value) {
         double tax = (value.doubleValue() * 8.2 / 100);
-        return value.add(BigDecimal.valueOf(tax));
+        return BigDecimal.valueOf(tax);
     }
 }
